@@ -19,7 +19,7 @@ public class Movie {
     private Long id;
 
     @NotBlank
-    private String tituo;
+    private String titulo;
 
     @Enumerated(EnumType.STRING)
     private GenreEnum genero;
