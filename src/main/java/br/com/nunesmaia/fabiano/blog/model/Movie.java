@@ -1,8 +1,8 @@
 package br.com.nunesmaia.fabiano.blog.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Entity
@@ -21,11 +21,11 @@ public class Movie {
     @NotBlank
     private String tituo;
 
-    @NotBlank
-    private String genero;
+    @Enumerated(EnumType.STRING)
+    private GenreEnum genero;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd-MM-yyyy")
-    private String anoDeLancamento;
+    @NotNull
+    private int anoDeLancamento;
 
 
 
