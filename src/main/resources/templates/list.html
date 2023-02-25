@@ -14,9 +14,7 @@
 <header>
 
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">List</li>
-        </ol>
+
     </nav>
 
 </header>
@@ -26,7 +24,7 @@
     <div class="card shadow-sm bg-white rounded" th:each="movie : ${movielist}">
         <div class="card-body">
 
-            <a th:href="@{/film-list/{id}(id=${movie.id})}">
+            <a th:href="@{'/movie/read/'+${movie.id}}">
                 <h4 class="card-title"><span th:text="${movie.titulo}"></span></h4>
             </a>
 

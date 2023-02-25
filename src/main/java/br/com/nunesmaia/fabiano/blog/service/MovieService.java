@@ -16,14 +16,14 @@ public class MovieService {
 
     private final MovieRepository repository;
 
-    public Movie save(Movie movie) throws YearUnfoundException {
+    public void save(Movie movie) throws YearUnfoundException {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         if (movie.getAnoDeLancamento() < 1900 || movie.getAnoDeLancamento() > year){
             throw new YearUnfoundException();
         }
 
-        return repository.save(movie);
+        repository.save(movie);
     }
 
     public List<Movie> findAll(){
