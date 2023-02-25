@@ -13,15 +13,13 @@
 
 <header>
 
-    <nav aria-label="breadcrumb">
-
-    </nav>
 
 </header>
 
 <div class="container" style="width: 60%; padding-bottom: 30px;">
+<h1 class="my-2 text-center">List</h1>
 
-    <div class="card shadow-sm bg-white rounded" th:each="movie : ${movielist}">
+    <div class="my-3 card shadow-sm bg-white rounded" th:each="movie : ${movielist}">
         <div class="card-body">
 
             <a th:href="@{'/movie/read/'+${movie.id}}">
